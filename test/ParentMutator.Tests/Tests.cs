@@ -231,5 +231,31 @@ namespace ParentMutator.Tests
 
             Assert.Equal(nameof(NewExplicitInterfaceOverride), typeName);
         }
+
+        [Fact]
+        public void GenericTest()
+        {
+            var instance = Assembly.GetInstance("ChildGeneric`1", false, t => t.MakeGenericType(typeof(int)));
+            var doubleInstance = Assembly.GetInstance(nameof(ChildGenericDouble));
+            var stringInstance = Assembly.GetInstance(nameof(ChildGenericString));
+
+            Assert.Equal(typeof(NewGeneric<int>), ((Type)instance.GetType()).BaseType);
+            Assert.Equal(typeof(NewGeneric<double>), ((Type)doubleInstance.GetType()).BaseType);
+            Assert.Equal(typeof(NewGeneric<string>), ((Type)stringInstance.GetType()).BaseType);
+
+            Assert.Equal("ChildGeneric", (string)instance.TypeName);
+            Assert.Equal("NewGeneric`Double", (string)doubleInstance.TypeName);
+            Assert.Equal("NewGeneric`String", (string)stringInstance.TypeName);
+        }
+
+        [Fact]
+        public void ToGenericTest()
+        {
+            var instance = Assembly.GetInstance(nameof(ChildToGeneric));
+
+            Assert.Equal(typeof(NewToGeneric<string>), ((Type)instance.GetType()).BaseType);
+
+            Assert.Equal(typeof(string).Name, (string)instance.TypeName);
+        }
     }
 }
