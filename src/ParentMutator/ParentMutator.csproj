@@ -8,8 +8,8 @@
     <PackageTags>ParentMutator Fody IL Cecil</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>$(SolutionDir)key.snk</AssemblyOriginatorKeyFile>
+    <!--<SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(SolutionDir)key.snk</AssemblyOriginatorKeyFile>-->
     <PackageOutputPath>$(SolutionDir)nugets</PackageOutputPath>
     <PackageProjectUrl>https://github.com/inversionhourglass/ParentMutator</PackageProjectUrl>
     <RepositoryUrl>https://github.com/inversionhourglass/ParentMutator.git</RepositoryUrl>
@@ -18,16 +18,16 @@
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <PackageReleaseNotes Condition="'$(VersionSuffix)' == ''">For details: https://github.com/inversionhourglass/ParentMutator/releases/tag/v$(VersionPrefix)</PackageReleaseNotes>
-    <PackageReadmeFile>README_en.md</PackageReadmeFile>
+    <!--<PackageReadmeFile>README_en.md</PackageReadmeFile>-->
   </PropertyGroup>
 	
   <ItemGroup>
     <!--<None Include="..\..\icon.png" Pack="true" PackagePath="\" />-->
-    <None Include="..\..\README_en.md" Pack="true" PackagePath="\" />
+    <!--<None Include="..\..\README_en.md" Pack="true" PackagePath="\" />-->
   </ItemGroup>
 	
   <ItemGroup>
-    <PackageReference Include="Fody" Version="6.8.1" PrivateAssets="none" />
+    <PackageReference Include="Fody" Version="6.8.1" PrivateAssets="None" />
     <PackageReference Include="FodyPackaging" Version="6.8.1" PrivateAssets="All" />
   </ItemGroup>
 

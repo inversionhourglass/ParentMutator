@@ -1,41 +1,36 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.1.32319.34
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E99BBF2A-FEAE-4CA4-BD18-646D1ACAB543}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F1BEA5C4-CE1E-4DB8-9555-1161C4C61518}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{8C9FFBEC-F477-4037-B3FE-BAF02ED3A16C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{353F6028-783D-4F6C-927C-1390522430A0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_SolutionItems", "{BCA66129-FEC9-4244-B53E-931B928C723E}"
-	ProjectSection(SolutionItems) = preProject
-		CHANGELOG.md = CHANGELOG.md
-		README.md = README.md
-		README_en.md = README_en.md
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{B44AAF8B-C06A-4A53-A060-DB278243A2E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_SolutionItems", "{969D7631-42B6-4DE6-94A3-8E2C2A17B616}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParentMutator", "src\ParentMutator\ParentMutator.csproj", "{35854A17-8B8D-4D6C-8533-060B167FD85C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{047BDCAC-5F01-45B7-A793-10179E59DF81} = {047BDCAC-5F01-45B7-A793-10179E59DF81}
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{075CC441-9BF3-4520-93D3-AE00A6758C2D}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Fody.Simulations", "shared\Fody.Simulations\Fody.Simulations.shproj", "{A4AAE133-ECEF-48FC-B04C-015811E24C6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParentMutator.Fody", "src\ParentMutator.Fody\ParentMutator.Fody.csproj", "{047BDCAC-5F01-45B7-A793-10179E59DF81}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Cecil.AspectN", "shared\Cecil.AspectN\Cecil.AspectN.shproj", "{DA6B6E9A-B485-4391-9934-CF0CFF653BB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParentMutator", "src\ParentMutator\ParentMutator.csproj", "{80FAE7FE-A124-4E88-ABA0-9DC43EA73C9A}"
-	ProjectSection(ProjectDependencies) = postProject
-		{E7A83D3B-FA98-43D6-9DA8-C35AC574B869} = {E7A83D3B-FA98-43D6-9DA8-C35AC574B869}
-	EndProjectSection
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Fody.Simulations", "shared\Fody.Simulations\Fody.Simulations.shproj", "{A4AAE133-ECEF-48FC-B04C-015811E24C6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParentMutator.Fody", "src\ParentMutator.Fody\ParentMutator.Fody.csproj", "{E7A83D3B-FA98-43D6-9DA8-C35AC574B869}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestAssemblies", "TestAssemblies", "{C3913A4C-3E35-4E83-AD84-9D17D518C37E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParentMutator.Tests", "test\ParentMutator.Tests\ParentMutator.Tests.csproj", "{EA5EDA7D-B088-48A2-8159-A2520C119714}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OriginalParentDefinitions", "test\TestAssemblies\OriginalParentDefinitions\OriginalParentDefinitions.csproj", "{8A6C4636-605F-40CB-953C-7AD484147608}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestAssemblies", "TestAssemblies", "{D8E7773D-D89C-4FC6-B0BB-F1F1B883F8E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewParentDefinitions", "test\TestAssemblies\NewParentDefinitions\NewParentDefinitions.csproj", "{FB9A5450-A662-4818-AC60-19E9D7919616}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OriginalParentDefinitions", "test\TestAssemblies\OriginalParentDefinitions\OriginalParentDefinitions.csproj", "{E9D522C7-5C9E-4B6C-BC71-7A5E8EC314D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChildDefinitions", "test\TestAssemblies\ChildDefinitions\ChildDefinitions.csproj", "{E259228D-E0B2-4EE7-9C5C-DF2D18C559A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewParentDefinitions", "test\TestAssemblies\NewParentDefinitions\NewParentDefinitions.csproj", "{83ECC616-D3F5-4DE0-83E8-641B09D11240}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChildDefinitions", "test\TestAssemblies\ChildDefinitions\ChildDefinitions.csproj", "{DE4EC10F-B6CB-4616-B5F8-584F78BE5EBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParentMutator.Tests", "test\ParentMutator.Tests\ParentMutator.Tests.csproj", "{C455642F-1A9B-4E5A-A956-7614FA2F425A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,52 +38,49 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{80FAE7FE-A124-4E88-ABA0-9DC43EA73C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{80FAE7FE-A124-4E88-ABA0-9DC43EA73C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{80FAE7FE-A124-4E88-ABA0-9DC43EA73C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{80FAE7FE-A124-4E88-ABA0-9DC43EA73C9A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E7A83D3B-FA98-43D6-9DA8-C35AC574B869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E7A83D3B-FA98-43D6-9DA8-C35AC574B869}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E7A83D3B-FA98-43D6-9DA8-C35AC574B869}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E7A83D3B-FA98-43D6-9DA8-C35AC574B869}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EA5EDA7D-B088-48A2-8159-A2520C119714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA5EDA7D-B088-48A2-8159-A2520C119714}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EA5EDA7D-B088-48A2-8159-A2520C119714}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA5EDA7D-B088-48A2-8159-A2520C119714}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E9D522C7-5C9E-4B6C-BC71-7A5E8EC314D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9D522C7-5C9E-4B6C-BC71-7A5E8EC314D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9D522C7-5C9E-4B6C-BC71-7A5E8EC314D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9D522C7-5C9E-4B6C-BC71-7A5E8EC314D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{83ECC616-D3F5-4DE0-83E8-641B09D11240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{83ECC616-D3F5-4DE0-83E8-641B09D11240}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{83ECC616-D3F5-4DE0-83E8-641B09D11240}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{83ECC616-D3F5-4DE0-83E8-641B09D11240}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DE4EC10F-B6CB-4616-B5F8-584F78BE5EBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DE4EC10F-B6CB-4616-B5F8-584F78BE5EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DE4EC10F-B6CB-4616-B5F8-584F78BE5EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DE4EC10F-B6CB-4616-B5F8-584F78BE5EBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35854A17-8B8D-4D6C-8533-060B167FD85C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35854A17-8B8D-4D6C-8533-060B167FD85C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35854A17-8B8D-4D6C-8533-060B167FD85C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35854A17-8B8D-4D6C-8533-060B167FD85C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{047BDCAC-5F01-45B7-A793-10179E59DF81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{047BDCAC-5F01-45B7-A793-10179E59DF81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{047BDCAC-5F01-45B7-A793-10179E59DF81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{047BDCAC-5F01-45B7-A793-10179E59DF81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A6C4636-605F-40CB-953C-7AD484147608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A6C4636-605F-40CB-953C-7AD484147608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A6C4636-605F-40CB-953C-7AD484147608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A6C4636-605F-40CB-953C-7AD484147608}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB9A5450-A662-4818-AC60-19E9D7919616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9A5450-A662-4818-AC60-19E9D7919616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB9A5450-A662-4818-AC60-19E9D7919616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB9A5450-A662-4818-AC60-19E9D7919616}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E259228D-E0B2-4EE7-9C5C-DF2D18C559A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E259228D-E0B2-4EE7-9C5C-DF2D18C559A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E259228D-E0B2-4EE7-9C5C-DF2D18C559A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E259228D-E0B2-4EE7-9C5C-DF2D18C559A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C455642F-1A9B-4E5A-A956-7614FA2F425A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C455642F-1A9B-4E5A-A956-7614FA2F425A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C455642F-1A9B-4E5A-A956-7614FA2F425A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C455642F-1A9B-4E5A-A956-7614FA2F425A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{A4AAE133-ECEF-48FC-B04C-015811E24C6D} = {075CC441-9BF3-4520-93D3-AE00A6758C2D}
-		{DA6B6E9A-B485-4391-9934-CF0CFF653BB8} = {075CC441-9BF3-4520-93D3-AE00A6758C2D}
-		{80FAE7FE-A124-4E88-ABA0-9DC43EA73C9A} = {E99BBF2A-FEAE-4CA4-BD18-646D1ACAB543}
-		{E7A83D3B-FA98-43D6-9DA8-C35AC574B869} = {E99BBF2A-FEAE-4CA4-BD18-646D1ACAB543}
-		{EA5EDA7D-B088-48A2-8159-A2520C119714} = {8C9FFBEC-F477-4037-B3FE-BAF02ED3A16C}
-		{D8E7773D-D89C-4FC6-B0BB-F1F1B883F8E5} = {8C9FFBEC-F477-4037-B3FE-BAF02ED3A16C}
-		{E9D522C7-5C9E-4B6C-BC71-7A5E8EC314D0} = {D8E7773D-D89C-4FC6-B0BB-F1F1B883F8E5}
-		{83ECC616-D3F5-4DE0-83E8-641B09D11240} = {D8E7773D-D89C-4FC6-B0BB-F1F1B883F8E5}
-		{DE4EC10F-B6CB-4616-B5F8-584F78BE5EBD} = {D8E7773D-D89C-4FC6-B0BB-F1F1B883F8E5}
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0BD0178E-76E0-4736-A036-89B1AA268A05}
+		{35854A17-8B8D-4D6C-8533-060B167FD85C} = {F1BEA5C4-CE1E-4DB8-9555-1161C4C61518}
+		{047BDCAC-5F01-45B7-A793-10179E59DF81} = {F1BEA5C4-CE1E-4DB8-9555-1161C4C61518}
+		{DA6B6E9A-B485-4391-9934-CF0CFF653BB8} = {353F6028-783D-4F6C-927C-1390522430A0}
+		{A4AAE133-ECEF-48FC-B04C-015811E24C6D} = {353F6028-783D-4F6C-927C-1390522430A0}
+		{C3913A4C-3E35-4E83-AD84-9D17D518C37E} = {B44AAF8B-C06A-4A53-A060-DB278243A2E1}
+		{8A6C4636-605F-40CB-953C-7AD484147608} = {C3913A4C-3E35-4E83-AD84-9D17D518C37E}
+		{FB9A5450-A662-4818-AC60-19E9D7919616} = {C3913A4C-3E35-4E83-AD84-9D17D518C37E}
+		{E259228D-E0B2-4EE7-9C5C-DF2D18C559A2} = {C3913A4C-3E35-4E83-AD84-9D17D518C37E}
+		{C455642F-1A9B-4E5A-A956-7614FA2F425A} = {B44AAF8B-C06A-4A53-A060-DB278243A2E1}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		shared\Cecil.AspectN\Cecil.AspectN.projitems*{047bdcac-5f01-45b7-a793-10179e59df81}*SharedItemsImports = 5
+		shared\Fody.Simulations\Fody.Simulations.projitems*{047bdcac-5f01-45b7-a793-10179e59df81}*SharedItemsImports = 5
 		shared\Fody.Simulations\Fody.Simulations.projitems*{a4aae133-ecef-48fc-b04c-015811e24c6d}*SharedItemsImports = 13
 		shared\Cecil.AspectN\Cecil.AspectN.projitems*{da6b6e9a-b485-4391-9934-cf0cff653bb8}*SharedItemsImports = 13
-		shared\Cecil.AspectN\Cecil.AspectN.projitems*{e7a83d3b-fa98-43d6-9da8-c35ac574b869}*SharedItemsImports = 5
-		shared\Fody.Simulations\Fody.Simulations.projitems*{e7a83d3b-fa98-43d6-9da8-c35ac574b869}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
